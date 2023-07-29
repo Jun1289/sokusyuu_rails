@@ -22,7 +22,7 @@ class TasksController < ApplicationController
       render :new
       return
     end
-    
+
     if @task.save
       redirect_to @task, notice: "タスク「#{@task.name}」を登録しました。"
     else
@@ -47,7 +47,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :description)
+    params.require(:task).permit(:name, :description, :image)
   end
 
   def set_task
