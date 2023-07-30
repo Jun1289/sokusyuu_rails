@@ -1,3 +1,7 @@
+import {turbolinks} from turbolinks
+document.addEventListener('turbolinks:load', function() {
+    console.log('Loaded');
+})
 
 document.addEventListener('turbolinks;load', function(){
     document.querySelectorAll('td').forEach(function(td){
@@ -9,17 +13,5 @@ document.addEventListener('turbolinks;load', function(){
             console.log("MOUSE OUT");
             e.currentTarget.style.backgroundColor = ''
         })
-    })
-})
-
-
-document.addEventListener('turbolinks:load', function(){
-    document.querySelectorAll('.delete').forEach(function(a){
-        a.addEventListener('ajax:success', function(){
-            console.log("ajaxが成功");
-            var td = a.parentNode;
-            var tr = td.parentNode;
-            tr.style.display = 'none';
-        });
     })
 })
