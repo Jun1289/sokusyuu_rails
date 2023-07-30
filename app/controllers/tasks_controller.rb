@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
-    @tasks = current_user.tasks
+    @tasks = current_user.tasks.page(params[:page]).per(10)
 
     respond_to do |format|
       format.html
@@ -29,6 +29,7 @@ class TasksController < ApplicationController
     end
 
     if @task.save
+      SampleJob.perform_later
       redirect_to @task, notice: "タスク「#{@task.name}」を登録しました。"
     else
       render :new
