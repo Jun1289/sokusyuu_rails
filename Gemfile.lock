@@ -89,6 +89,7 @@ GEM
     crass (1.0.6)
     date (3.3.3)
     diff-lcs (1.5.0)
+    diffy (3.4.2)
     erubi (1.12.0)
     execjs (2.8.1)
     factory_bot (6.2.1)
@@ -202,6 +203,9 @@ GEM
       connection_pool
     regexp_parser (2.8.1)
     rexml (3.2.5)
+    ridgepole (1.2.1)
+      activerecord (>= 5.1, < 7.1)
+      diffy
     rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.3)
@@ -305,6 +309,7 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.7, >= 6.1.7.4)
   rails_autolink
+  ridgepole
   rspec-rails
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
