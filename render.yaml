@@ -1,8 +1,9 @@
 databases:
-  - name: rails_test
-    databaseName: rails_test
-    user: jun
-    region: singapore
+  - name: postgres
+    ipAllowList: []
+    # databaseName: rails_test
+    # user: jun
+    # region: singapore
 
 services:
   - type: web
