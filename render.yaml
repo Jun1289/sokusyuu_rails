@@ -1,13 +1,13 @@
 databases:
-  - name: postgres
+  - name: taskleaf_production
     # ipAllowList: []
-    databaseName: postgres
+    databaseName: taskleaf_production
     user: jun
     # region: singapore
 
 services:
   - type: web
-    name: Rails_deploy_test
+    name: Taskleaf
     env: ruby
     region: singapore
     plan: free
@@ -16,7 +16,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: postgres
+          name: taskleaf_production
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
