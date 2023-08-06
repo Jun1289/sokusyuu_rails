@@ -3,7 +3,7 @@ databases:
     plan: free
     # ipAllowList: []
     databaseName: taskleaf_db
-    user: Rails_deploy_test
+    user: taskleaf_db_user
     region: singapore
 
 services:
