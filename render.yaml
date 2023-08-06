@@ -2,7 +2,7 @@ databases:
   - name: taskleaf_production
     plan: free
     # ipAllowList: []
-    databaseName: taskleaf_production
+    # databaseName: taskleaf_production
     user: taskleaf
     # region: singapore
 
