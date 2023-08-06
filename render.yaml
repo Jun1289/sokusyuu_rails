@@ -2,13 +2,13 @@ databases:
   - name: taskleaf_production
     plan: free
     # ipAllowList: []
-    # databaseName: taskleaf_production
-    user: taskleaf
-    # region: singapore
+    databaseName: taskleaf_production
+    user: Rails_deploy_test
+    region: singapore
 
 services:
   - type: web
-    name: Taskleaf
+    name: Rails_deploy_test
     env: ruby
     region: singapore
     plan: free
