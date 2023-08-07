@@ -5,7 +5,9 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :email, null: false
       t.string :password_digest, null: false
 
-      t.timestamp
+      # t.timestamp
+      t.datetime :created_at, precision: 6
+      t.datetime :updated_at, precision: 6
       t.index :email, unique: true
     end
   end
