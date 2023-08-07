@@ -4,7 +4,9 @@ class CreateTasks < ActiveRecord::Migration[6.1]
       t.string :name
       t.text :description
 
-      t.timestamps
+      # t.timestamps
+      t.datetime :created_at, precision: 6
+      t.datetime :updated_at, precision: 6
     end
   end
 end
