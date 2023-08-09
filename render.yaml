@@ -5,9 +5,7 @@ databases:
     databaseName: taskleaf_db
     user: taskleaf_db_user
     region: singapore
-render:
-  service: Disk
-  root: "tmp/storage"
+
 services:
   - type: web
     name: Rails_deploy_test
