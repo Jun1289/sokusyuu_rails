@@ -51,8 +51,20 @@ class TasksController < ApplicationController
   end
   
   def import 
-    current_user.tasks.import(params[:file])
-    redirect_to tasks_url, notice: "タスクを追加しました"
+    begin
+      current_user.tasks.import(params[:file])
+      # @tasks = current_user.tasks.page(params[:page]).per(10)
+      # flash.now[:notice] = "タスクを追加しました"
+      redirect_to tasks_url, notice: "タスクを追加しました"
+      # render :index
+    rescue ActiveRecord::RecordInvalid => e
+      # @tasks = current_user.tasks.page(params[:page]).per(10)
+      # バリデーションエラーが発生した場合の処理
+      # @error_message = e.record.errors.full_messages.join(", ")
+      redirect_to tasks_url, alert: "インポート失敗: フォーマットに則したcsvファイルをインポートしてください"
+      # flash.now[:alert] = "インポートに失敗しました: #{e.record.errors.full_messages.join(", ")}"
+      # render :index
+    end
   end
   
   private
