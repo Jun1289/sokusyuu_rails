@@ -13,5 +13,6 @@ bundle exec rails active_storage:install
 bundle exec rails webpacker:compile  
 # bundle install
 # rails db:reset
-# bundle exec rails db:migrate
+bundle exec rails db:migrate:status
+bundle exec rails db:migrate
 bundle exec rails db:seed
