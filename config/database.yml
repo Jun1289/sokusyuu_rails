@@ -81,10 +81,10 @@ test:
 #
 production:
   <<: *default
-  # adapter: postgresql
-  # encoding: unicode
-  # pool: 5
-  database: taskleaf_db
-  username: taskleaf_db_user
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  # database: taskleaf_db
+  # username: taskleaf_db_user
+  # password: <%= ENV['DATABASE_PASSWORD'] %>
+  # url: <%= ENV['DATABASE_URL'] %>
