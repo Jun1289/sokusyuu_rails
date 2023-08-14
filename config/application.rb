@@ -20,5 +20,6 @@ module Taskleaf
     config.time_zone = "Asia/Tokyo"
     # config.eager_load_paths << Rails.root.join("extras")
     config.hosts << 'rails-deploy-test.onrender.com'
+    config.i18n.default_locale = :ja #追加
   end 
 end
