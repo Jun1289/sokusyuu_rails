@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.4'
+ruby File.read('.ruby-version').split.first
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.4'
@@ -34,6 +34,11 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'rubocop'
+  gem 'rubocop-rails'
+  gem 'rubocop-erb'
+  gem 'rubocop-performance'
+  gem 'rubocop-rspec'
 end
 
 group :development do

@@ -1,0 +1,29 @@
+# inherit_from: .rubocop_todo.yml
+
+# Used for merging with exclude lists with .rubocop_todo.yml
+inherit_mode:
+  merge:
+    - Exclude
+
+require:
+  - rubocop-erb
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.0 # Set to minimum supported version of CI
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  UseCache: true
+  CacheRootDirectory: tmp
+  NewCops: enable # Opt-in to newly added rules
+  Exclude:
+    - db/schema.rb
+    - 'bin/*'
+    - 'Rakefile'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'lib/templates/**/*'
